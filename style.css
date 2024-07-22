@@ -1,0 +1,162 @@
+/*Stile appliato a tutti gli elementi*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Stile del corpo della pagina*/
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+/*Stile parte principale della pagina*/
+.main {
+    width: 100%;
+    height: auto;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 50px;
+}
+
+/*Stile dell'heading*/
+.main .heading {
+    font-size: 25px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+/*Stile degli span dell'heading*/
+.heading span {
+    color: rgb(0, 81, 255)
+}
+
+/*Stile dell'heading in after*/
+.heading::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    background-color: rgb(0, 81, 255);
+}
+
+/*Stile del contenitore*/
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*Stile della card del contenitore*/
+.container .card {
+    width: 230px;
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.37);
+    margin: 25px;
+}
+
+/*Stile della card in after*/
+.card::after {
+    content: '';
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 81, 255, 0.864);
+}
+
+/*Stile dell'immagine della card*/
+.card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: fit;
+    transition: .6s;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.37);
+    z-index: 2;
+}
+
+/*Stile dell'immagine della card in Hover*/
+.card:hover img {
+    transform: scale(.50) translateY(-120px);
+    border-radius: 10px;
+}
+
+/*Stile dei dettagli dell'immagine della card*/
+.card .details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    transform: translateY(100%);
+    transition: .6s;
+}
+
+/*Stile dei dettagli dell'immagine della card in Hover*/
+.card:hover .details {
+    transform: translateY(0);
+}
+
+/*Stile dell'h3 dei dettagli della card*/
+.details h3 {
+    font-size: 22px;
+    color: rgb(0, 81, 255);
+}
+
+/*Stile della p dei dettagli della card*/
+.details p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 7px;
+}
+
+/*Stile dei social della card*/
+.details .social-links {
+    display: flex;
+}
+
+/*Stile della a dei social dei dettagli della card*/
+.details .social-links a{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+    color: #333;
+    background-color: rgb(182, 182, 182);
+    text-decoration: none;
+    transition: .6s;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+}
+
+/*Stile della a dei social dei dettagli della card in Hover*/
+.details .social-links a:hover {
+    transform: rotate(360deg);
+    background-color: rgb(0, 81, 255);
+    color: #fff;
+}
+
